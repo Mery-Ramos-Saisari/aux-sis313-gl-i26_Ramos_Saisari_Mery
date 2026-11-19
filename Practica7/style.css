@@ -1,0 +1,196 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.contenedor-principal {
+    background-color: #ffffff;
+    margin: 50px;
+    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: grid;
+    gap: 20px;
+}
+
+.caja {
+    border-radius: 5px;
+    min-height: 80px;
+}
+
+.rojo { background-color: #e60000; }
+.amarillo { background-color: #ffff00; }
+.verde { background-color: #008000; }
+
+.btn-volver {
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-volver:hover { background-color: #ddd; }
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    min-height: 300px;
+}
+
+
+.nivel-1 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.nivel-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.nivel-3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-3 .rojo { grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2; }
+.nivel-3 .amarillo { grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3; }
+.nivel-3 .verde { grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; }
+
+.nivel-4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-4 .rojo { grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 3; }
+.nivel-4 .amarillo { grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2; }
+.nivel-4 .verde { grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; }
+
+.nivel-5 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-5 .rojo { grid-column-start: 1; grid-column-end: 4; grid-row-start: 1; grid-row-end: 2; }
+.nivel-5 .amarillo { grid-column-start: 1; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; }
+.nivel-5 .verde { grid-column-start: 3; grid-column-end: 4; grid-row-start: 2; grid-row-end: 3; }
+
+.nivel-6 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-6 .rojo { grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 2; }
+.nivel-6 .amarillo { grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3; }
+.nivel-6 .verde { grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 3; }
+
+.nivel-7 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-7 .rojo { grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2; }
+.nivel-7 .amarillo { grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; }
+.nivel-7 .verde { grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 3; }
+
+.nivel-8 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "rojo rojo"
+        "amarillo verde";
+}
+.nivel-8 .rojo { grid-area: rojo; }
+.nivel-8 .amarillo { grid-area: amarillo; }
+.nivel-8 .verde { grid-area: verde; }
+
+.nivel-9 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "rojo amarillo"
+        "rojo verde";
+}
+.nivel-9 .rojo { grid-area: rojo; }
+.nivel-9 .amarillo { grid-area: amarillo; }
+.nivel-9 .verde { grid-area: verde; }
+
+.nivel-10 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "rojo amarillo"
+        "verde verde";
+}
+.nivel-10 .rojo { grid-area: rojo; }
+.nivel-10 .amarillo { grid-area: amarillo; }
+.nivel-10 .verde { grid-area: verde; }
+
+.nivel-11 {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.nivel-11 .rojo { grid-column: 1 / span 6; grid-row: 1 / 2; }
+.nivel-11 .amarillo { grid-column: 1 / span 6; grid-row: 2 / 3; }
+.nivel-11 .verde { grid-column: 7 / span 6; grid-row: 1 / 3; }
+
+.nivel-12 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "rojo verde"
+        "amarillo amarillo";
+}
+.nivel-12 .rojo { grid-area: rojo; }
+.nivel-12 .amarillo { grid-area: amarillo; }
+.nivel-12 .verde { grid-area: verde; }
+
+.info-estudiante {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    border-left: 4px solid #007bff;
+    background-color: #f8f9fa;
+    gap: 20px;
+}
+
+.info-estudiante p { margin: 5px 0; font-size: 14px; color: #333; }
+.info-estudiante strong { display: block; font-size: 12px; color: #666; text-transform: uppercase; }
+
+.grid-niveles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.grid-niveles a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.grid-niveles a:hover, .grid-niveles a.activo { background-color: #007bff; color: white; }
