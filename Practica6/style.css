@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.contenedor-principal {
+    background-color: #ffffff;
+    margin: 50px;       
+    padding: 50px;    
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.rojo { background-color: #e60000; }
+.amarillo { background-color: #ffff00; }
+.verde { background-color: #008000; }
+
+.btn-volver {
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #ddd;
+}
+
+.caja-flex {
+    display: flex;
+    background-color: #f8f9fa;
+    border: 2px dashed #ccc;
+    min-height: 250px; 
+    width: 100%;
+}
+
+.nivel-1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.nivel-2 {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.nivel-3 {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-4 {
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.nivel-5 {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-6 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nivel-7 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nivel-8 {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nivel-9 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nivel-10 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-11 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-12 {
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.nivel-13 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-14 {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nivel-15 {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info-estudiante {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-left: 4px solid #007bff;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.info-estudiante p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.info-estudiante strong {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.grid-niveles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-niveles a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.grid-niveles a:hover, .grid-niveles a.activo {
+    background-color: #007bff;
+    color: white;
+}
